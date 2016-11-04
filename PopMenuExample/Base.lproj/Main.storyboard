@@ -41,11 +41,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcT-ql-uVV">
+                                <rect key="frame" x="277" y="72" width="117" height="30"/>
+                                <state key="normal" title="Regular UIButton"/>
+                                <connections>
+                                    <action selector="regularMenuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Svu-0A-mod"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="s2L-hU-5SN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7W1-7W-MJi"/>
+                            <constraint firstItem="NcT-ql-uVV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="E4H-UU-zj0"/>
                             <constraint firstItem="s2L-hU-5SN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cVE-wb-28O"/>
+                            <constraint firstItem="NcT-ql-uVV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eHn-CM-PMg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cqL-DB-x0u">
