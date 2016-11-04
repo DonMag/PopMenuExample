@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TOQ-PS-YWL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="S2i-bd-HJF">
+            <objects>
+                <navigationController id="TOQ-PS-YWL" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h2l-kF-bPX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aZ3-Ye-TNi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMj-Uy-Xhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197" y="387"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PopMenuExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-hU-5SN">
+                                <rect key="frame" x="186" y="357" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s2L-hU-5SN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7W1-7W-MJi"/>
+                            <constraint firstItem="s2L-hU-5SN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cVE-wb-28O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cqL-DB-x0u">
+                        <barButtonItem key="leftBarButtonItem" title="⏬Calendar" id="5xu-0B-3us">
+                            <connections>
+                                <action selector="menuButtonTapped:" destination="BYZ-38-t0r" id="bxP-Ur-aE2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="label" destination="s2L-hU-5SN" id="w7G-lm-FGP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="387"/>
+        </scene>
+        <!--Pop Menu View Controller-->
+        <scene sceneID="cIm-OT-TI5">
+            <objects>
+                <viewController storyboardIdentifier="PopMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5f2-rM-9aQ" customClass="PopMenuViewController" customModule="PopMenuExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cQ5-wz-teb"/>
+                        <viewControllerLayoutGuide type="bottom" id="fPg-NE-1Bj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DBf-sj-DXx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxf-IW-Yzf">
+                                <rect key="frame" x="157" y="28" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FAq-oW-xuc"/>
+                                    <constraint firstAttribute="height" constant="30" id="GGa-b8-HYf"/>
+                                    <constraint firstAttribute="width" constant="30" id="R37-q4-m96"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Today"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="R37-q4-m96"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="menu1Tapped:" destination="5f2-rM-9aQ" eventType="touchUpInside" id="RdT-Lv-Ztn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awS-aE-oeh">
+                                <rect key="frame" x="157" y="66" width="100" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Week"/>
+                                <connections>
+                                    <action selector="menu2Tapped:" destination="5f2-rM-9aQ" eventType="touchUpInside" id="Iow-ji-oC8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLY-XG-lAE">
+                                <rect key="frame" x="157" y="107" width="100" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Month">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="menu3Tapped:" destination="5f2-rM-9aQ" eventType="touchUpInside" id="pb6-et-9KC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-4y-swz">
+                                <rect key="frame" x="157" y="148" width="100" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="None">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="menu4Tapped:" destination="5f2-rM-9aQ" eventType="touchUpInside" id="LRn-IT-5MY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aLY-XG-lAE" firstAttribute="leading" secondItem="awS-aE-oeh" secondAttribute="leading" id="7wT-9H-q12"/>
+                            <constraint firstItem="ClI-4y-swz" firstAttribute="top" secondItem="aLY-XG-lAE" secondAttribute="bottom" constant="8" id="Cjq-58-3Aj"/>
+                            <constraint firstItem="awS-aE-oeh" firstAttribute="top" secondItem="Sxf-IW-Yzf" secondAttribute="bottom" constant="8" id="Idd-um-XtZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sxf-IW-Yzf" secondAttribute="trailing" id="YLC-h4-D9E"/>
+                            <constraint firstItem="ClI-4y-swz" firstAttribute="leading" secondItem="aLY-XG-lAE" secondAttribute="leading" id="aIA-j9-vmx"/>
+                            <constraint firstItem="aLY-XG-lAE" firstAttribute="top" secondItem="awS-aE-oeh" secondAttribute="bottom" constant="8" id="bTX-9R-p5P"/>
+                            <constraint firstItem="Sxf-IW-Yzf" firstAttribute="centerX" secondItem="DBf-sj-DXx" secondAttribute="centerX" id="cI8-2Q-WN2"/>
+                            <constraint firstItem="Sxf-IW-Yzf" firstAttribute="leading" secondItem="DBf-sj-DXx" secondAttribute="leadingMargin" id="dMi-WH-Gp1"/>
+                            <constraint firstItem="ClI-4y-swz" firstAttribute="trailing" secondItem="aLY-XG-lAE" secondAttribute="trailing" id="djN-p9-dJt"/>
+                            <constraint firstItem="aLY-XG-lAE" firstAttribute="trailing" secondItem="awS-aE-oeh" secondAttribute="trailing" id="fPP-ED-jpZ"/>
+                            <constraint firstItem="Sxf-IW-Yzf" firstAttribute="top" secondItem="cQ5-wz-teb" secondAttribute="bottom" constant="8" id="pJ6-iX-BSq"/>
+                            <constraint firstItem="awS-aE-oeh" firstAttribute="leading" secondItem="Sxf-IW-Yzf" secondAttribute="leading" id="pxQ-3b-tFo"/>
+                            <constraint firstItem="awS-aE-oeh" firstAttribute="trailing" secondItem="Sxf-IW-Yzf" secondAttribute="trailing" id="wdo-TU-tAE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YLC-h4-D9E"/>
+                                <exclude reference="dMi-WH-Gp1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="buttonMenu1" destination="Sxf-IW-Yzf" id="hsN-iY-WEN"/>
+                        <outlet property="buttonMenu2" destination="awS-aE-oeh" id="1rU-YA-l3f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o49-Rb-DKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872" y="387"/>
+        </scene>
+    </scenes>
+</document>
