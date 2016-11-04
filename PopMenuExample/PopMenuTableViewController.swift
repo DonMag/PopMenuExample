@@ -14,11 +14,12 @@ class PopMenuTableViewController: UITableViewController {
 	
 	weak var menuDelegate: PopoverMenuDelegate?
 	
+	var checkMarkIndex: Int = 0
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-		
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +43,8 @@ class PopMenuTableViewController: UITableViewController {
         // Configure the cell...
 
 		cell.textLabel?.text = dataArray[indexPath.row]
+		
+		cell.accessoryType = (indexPath.row == checkMarkIndex) ? .Checkmark : .None
 		
         return cell
     }

@@ -17,6 +17,8 @@ protocol PopoverMenuDelegate: class {
 class ViewController: UIViewController, UIPopoverPresentationControllerDelegate, PopoverMenuDelegate {
     
     @IBOutlet weak var label: UILabel!
+	
+	var currentSelection: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +31,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         // Dispose of any resources that can be recreated.
     }
 
-	// this function conforms to our custom CalendarTypePopoverDelegate protocol and will be called by the "popover" menu
+	// this function conforms to our custom PopoverMenuDelegate protocol and will be called by the "popover" menu
 	func menuItemSelected(typeID: Int) {
+		
+		self.currentSelection = typeID
 		
 		var vString: String = ""
 		
@@ -63,8 +67,11 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
 		vc.preferredContentSize = CGSize(width: 140, height: 180)
 		vc.view.backgroundColor = UIColor.lightGrayColor()
 		
-		// set the custom CalendarTypePopoverDelegate to self
+		// set the custom PopoverMenuDelegate to self
 		vc.menuDelegate = self
+		
+		// tell the popover which item is currently selected
+		vc.checkMarkIndex = currentSelection
 		
 		// set the popover "styling"
 		vc.modalPresentationStyle = .Popover
@@ -94,7 +101,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
 		vc.preferredContentSize = CGSize(width: 100, height: 170)
 		vc.view.backgroundColor = UIColor.lightGrayColor()
 		
-		// set the custom CalendarTypePopoverDelegate to self
+		// set the custom PopoverMenuDelegate to self
 		vc.menuDelegate = self
 		
 		// set the popover "styling"
@@ -123,7 +130,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
         vc.preferredContentSize = CGSize(width: 100, height: 170)
         vc.view.backgroundColor = UIColor.lightGrayColor()
 		
-		// set the custom CalendarTypePopoverDelegate to self
+		// set the custom PopoverMenuDelegate to self
 		vc.menuDelegate = self
 
 		// set the popover "styling"
