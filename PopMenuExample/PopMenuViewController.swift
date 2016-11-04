@@ -8,19 +8,13 @@
 
 import UIKit
 
-// custom delegate to send selected menu item ID back to the presenting controller
-
-protocol CalendarTypePopoverDelegate: class {
-	func calendarTypeSelected(typeID: Int)
-}
-
 
 class PopMenuViewController: UIViewController {
     
     @IBOutlet weak var buttonMenu1: UIButton!
     @IBOutlet weak var buttonMenu2: UIButton!
 	
-	weak var menuDelegate: CalendarTypePopoverDelegate?
+	weak var menuDelegate: PopoverMenuDelegate?
 	
 	// we've assigned each menu button a unique tag ( 1 to 4 )
 	// that way we have ONE IBAction that all 4 buttons call, instead of FOUR duplicate functions
@@ -31,7 +25,7 @@ class PopMenuViewController: UIViewController {
 		
 		let btnID = btn.tag
 		
-		self.menuDelegate?.calendarTypeSelected(btnID)
+		self.menuDelegate?.menuItemSelected(btnID)
 		
 	}
 	

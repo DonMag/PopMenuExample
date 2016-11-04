@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C1B63821DCD135800DD14D9 /* PopMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1B63811DCD135800DD14D9 /* PopMenuTableViewController.swift */; };
 		D332F7EB1DCC0E4E000A6A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D332F7EA1DCC0E4E000A6A62 /* AppDelegate.swift */; };
 		D332F7ED1DCC0E4E000A6A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D332F7EC1DCC0E4E000A6A62 /* ViewController.swift */; };
 		D332F7F01DCC0E4E000A6A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D332F7EE1DCC0E4E000A6A62 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C1B63811DCD135800DD14D9 /* PopMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopMenuTableViewController.swift; sourceTree = "<group>"; };
 		D332F7E71DCC0E4E000A6A62 /* PopMenuExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopMenuExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D332F7EA1DCC0E4E000A6A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D332F7EC1DCC0E4E000A6A62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				D332F7F11DCC0E4E000A6A62 /* Assets.xcassets */,
 				D332F7F31DCC0E4E000A6A62 /* LaunchScreen.storyboard */,
 				D332F7F61DCC0E4E000A6A62 /* Info.plist */,
+				7C1B63811DCD135800DD14D9 /* PopMenuTableViewController.swift */,
 			);
 			path = PopMenuExample;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1B63821DCD135800DD14D9 /* PopMenuTableViewController.swift in Sources */,
 				D332F7ED1DCC0E4E000A6A62 /* ViewController.swift in Sources */,
 				D332F7EB1DCC0E4E000A6A62 /* AppDelegate.swift in Sources */,
 				D332F8191DCC290C000A6A62 /* PopMenuViewController.swift in Sources */,
@@ -488,6 +492,7 @@
 				D332F8111DCC0E4F000A6A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D332F8121DCC0E4F000A6A62 /* Build configuration list for PBXNativeTarget "PopMenuExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				D332F8141DCC0E4F000A6A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D332F8151DCC0E4F000A6A62 /* Build configuration list for PBXNativeTarget "PopMenuExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				D332F8171DCC0E4F000A6A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -48,6 +48,13 @@
                                     <action selector="regularMenuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Svu-0A-mod"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-Zx-0Rp">
+                                <rect key="frame" x="20" y="72" width="112" height="30"/>
+                                <state key="normal" title="TableView Menu"/>
+                                <connections>
+                                    <action selector="tableViewMenuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9V-e4-ALW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -55,6 +62,8 @@
                             <constraint firstItem="NcT-ql-uVV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="E4H-UU-zj0"/>
                             <constraint firstItem="s2L-hU-5SN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cVE-wb-28O"/>
                             <constraint firstItem="NcT-ql-uVV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eHn-CM-PMg"/>
+                            <constraint firstItem="Bqh-Zx-0Rp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rIi-H5-b8w"/>
+                            <constraint firstItem="Bqh-Zx-0Rp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zeJ-4e-fH6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cqL-DB-x0u">
@@ -85,7 +94,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxf-IW-Yzf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxf-IW-Yzf">
                                 <rect key="frame" x="157" y="28" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="FAq-oW-xuc"/>
@@ -103,7 +112,7 @@
                                     <action selector="menuButtonTapped:" destination="5f2-rM-9aQ" eventType="touchUpInside" id="nBn-g2-VG9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awS-aE-oeh">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awS-aE-oeh">
                                 <rect key="frame" x="157" y="66" width="100" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Week"/>
@@ -111,7 +120,7 @@
                                     <action selector="menuButtonTapped:" destination="5f2-rM-9aQ" eventType="touchUpInside" id="G1u-dN-Yac"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLY-XG-lAE">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLY-XG-lAE">
                                 <rect key="frame" x="157" y="107" width="100" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Month">
@@ -121,7 +130,7 @@
                                     <action selector="menuButtonTapped:" destination="5f2-rM-9aQ" eventType="touchUpInside" id="n57-dX-Lcb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-4y-swz">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-4y-swz">
                                 <rect key="frame" x="157" y="148" width="100" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="None">
