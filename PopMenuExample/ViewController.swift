@@ -10,70 +10,70 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class ViewController: UIViewController, UIPopoverPresentationControllerDelegate, CalendarTypePopoverDelegate {
     
     @IBOutlet weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        addObservers()
+		
     }
-    
-    func addObservers() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.menu1(_:)), name: menu1TappedDone, object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.menu2(_:)), name: menu2TappedDone, object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.menu3(_:)), name: menu3TappedDone, object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.menu4(_:)), name: menu4TappedDone, object: nil)
-        
-    }
-    
-    func menu1(sender: NSNotification) {
-        label.text = "menu 1 selected: Today"
-    }
-    
-    func menu2(sender: NSNotification) {
-        label.text = "menu 2 selected: Week"
-    }
-    
-    func menu3(sender: NSNotification) {
-        label.text = "menu 3 selected: Month"
-    }
-    
-    func menu4(sender: NSNotification) {
-        label.text = "menu 4 selected: None"
-    }
-    
-
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+	// this function conforms to our custom CalendarTypePopoverDelegate protocol and will be called by the "popover" menu
+	func calendarTypeSelected(typeID: Int) {
+		
+		var vString: String = ""
+		
+		switch typeID {
+		case 1:
+			vString = "menu 1 selected: Today"
+		case 2:
+			vString = "menu 2 selected: Week"
+		case 3:
+			vString = "menu 3 selected: Month"
+		default:
+			vString = "menu 4 selected: None"
+		}
+		
+		// dismiss the popover menu
+		self.dismissViewControllerAnimated(true, completion: nil)
+		
+		self.label.text = vString
+		
+	}
+	
     @IBAction func menuButtonTapped(sender: AnyObject) {
-        
+		
+		// instantiate the popover menu view controller
         let vc = storyboard?.instantiateViewControllerWithIdentifier("PopMenuViewController") as! PopMenuViewController
-        
-       // vc.preferredContentSize = CGSize(width: UIScreen.mainScreen().bounds.width, height: 100)
+		
+		// set the desired size and background color
         vc.preferredContentSize = CGSize(width: 100, height: 170)
         vc.view.backgroundColor = UIColor.lightGrayColor()
+		
+		// set the custom CalendarTypePopoverDelegate to self
+		vc.menuDelegate = self
 
-        let navController = UINavigationController(rootViewController: vc)
-        
-        navController.modalPresentationStyle = .Popover
-        navController.navigationBarHidden = true
-        
-        let popMenu = navController.popoverPresentationController
-        
-        popMenu?.backgroundColor  = UIColor.lightGrayColor()
+		// set the popover "styling"
+		vc.modalPresentationStyle = .Popover
+		
+		vc.popoverPresentationController?.backgroundColor = UIColor.lightGrayColor()
+		
+		// tell it what object to use as the popover "pointy thingy" reference
+		vc.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
 
-        popMenu?.delegate = self
-        popMenu?.barButtonItem = sender as? UIBarButtonItem
-        presentViewController(navController, animated: true, completion: nil)
-    
+		// set the UIPopoverPresentationControllerDelegate to self
+		vc.popoverPresentationController?.delegate = self
+
+		// show the popover menu
+		presentViewController(vc, animated: true, completion: nil)
+
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
