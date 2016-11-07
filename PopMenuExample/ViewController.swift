@@ -18,7 +18,13 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
     
     @IBOutlet weak var label: UILabel!
 	
-	var currentSelection: Int = 0
+	var calendarOptsArray: [String] = ["Today", "Week", "Month", "None"]
+	var someOtherOptsArray: [String] = ["First", "Second", "Third", "Last"]
+
+	var calendarCurrentSelection: Int = 0
+	var someOtherCurrentSelection: Int = 0
+	
+	var currentMenuType: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,31 +40,34 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
 	// this function conforms to our custom PopoverMenuDelegate protocol and will be called by the "popover" menu
 	func menuItemSelected(typeID: Int) {
 		
-		self.currentSelection = typeID
+		var arrayRef: [String] = []
 		
-		var vString: String = ""
-		
-		switch typeID {
-		case 0:
-			vString = "menu 1 selected: Today"
-		case 1:
-			vString = "menu 2 selected: Week"
-		case 2:
-			vString = "menu 3 selected: Month"
-		default:
-			vString = "menu 4 selected: None"
+		if self.currentMenuType == 1 {
+
+			self.someOtherCurrentSelection = typeID
+			
+			arrayRef = self.someOtherOptsArray
+			
+		} else {
+
+			self.calendarCurrentSelection = typeID
+			
+			arrayRef = self.calendarOptsArray
+			
 		}
 		
 		// dismiss the popover menu
 		self.dismissViewControllerAnimated(true, completion: nil)
 		
-		self.label.text = vString
+		self.label.text = "menu \(typeID) selected: \(arrayRef[typeID])"
 		
 	}
 	
 	@IBAction func tableViewMenuButtonTapped(sender: AnyObject) {
 		
 		guard let btn = sender as? UIButton else { return }
+		
+		self.currentMenuType = btn.tag
 		
 		// instantiate the popover menu view controller
 		let vc = PopMenuTableViewController()
@@ -70,8 +79,15 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate,
 		// set the custom PopoverMenuDelegate to self
 		vc.menuDelegate = self
 		
-		// tell the popover which item is currently selected
-		vc.checkMarkIndex = currentSelection
+		// tell the popover what data to use
+		// and which item is currently selected
+		if self.currentMenuType == 1 {
+			vc.dataArray = self.someOtherOptsArray
+			vc.checkMarkIndex = self.someOtherCurrentSelection
+		} else {
+			vc.dataArray = self.calendarOptsArray
+			vc.checkMarkIndex = self.calendarCurrentSelection
+		}
 		
 		// set the popover "styling"
 		vc.modalPresentationStyle = .Popover

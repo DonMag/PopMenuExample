@@ -49,22 +49,37 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-Zx-0Rp">
-                                <rect key="frame" x="20" y="72" width="112" height="30"/>
-                                <state key="normal" title="TableView Menu"/>
+                                <rect key="frame" x="121" y="144" width="172" height="30"/>
+                                <state key="normal" title="TableView Calendar Opts"/>
                                 <connections>
                                     <action selector="tableViewMenuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c9V-e4-ALW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04z-M1-oM6">
+                                <rect key="frame" x="132" y="184" width="150" height="30"/>
+                                <state key="normal" title="TableView Other Opts"/>
+                                <connections>
+                                    <action selector="tableViewMenuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96v-j1-sCZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Bqh-Zx-0Rp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4E3-Jh-Ef6"/>
                             <constraint firstItem="s2L-hU-5SN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7W1-7W-MJi"/>
                             <constraint firstItem="NcT-ql-uVV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="E4H-UU-zj0"/>
+                            <constraint firstItem="04z-M1-oM6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fcw-l8-i70"/>
                             <constraint firstItem="s2L-hU-5SN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cVE-wb-28O"/>
                             <constraint firstItem="NcT-ql-uVV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eHn-CM-PMg"/>
                             <constraint firstItem="Bqh-Zx-0Rp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rIi-H5-b8w"/>
-                            <constraint firstItem="Bqh-Zx-0Rp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zeJ-4e-fH6"/>
+                            <constraint firstItem="04z-M1-oM6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="xGh-SM-Uh2"/>
+                            <constraint firstItem="Bqh-Zx-0Rp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="zeJ-4e-fH6"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rIi-H5-b8w"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="cqL-DB-x0u">
                         <barButtonItem key="leftBarButtonItem" title="⏬Calendar" id="5xu-0B-3us">
