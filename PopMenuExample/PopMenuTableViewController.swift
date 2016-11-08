@@ -10,7 +10,6 @@ import UIKit
 
 class PopMenuTableViewController: UITableViewController {
 
-//	var dataArray: [String] = ["Today", "Week", "Month", "None"]
 	var dataArray: [String] = []
 	
 	weak var menuDelegate: PopoverMenuDelegate?
