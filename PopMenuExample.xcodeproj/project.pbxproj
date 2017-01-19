@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		7C1B63811DCD135800DD14D9 /* PopMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopMenuTableViewController.swift; sourceTree = "<group>"; };
+		7C91146D1DD24B4F008A05F7 /* PopMenuExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PopMenuExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		D332F7E71DCC0E4E000A6A62 /* PopMenuExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopMenuExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D332F7EA1DCC0E4E000A6A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D332F7EC1DCC0E4E000A6A62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 				D332F7F31DCC0E4E000A6A62 /* LaunchScreen.storyboard */,
 				D332F7F61DCC0E4E000A6A62 /* Info.plist */,
 				7C1B63811DCD135800DD14D9 /* PopMenuTableViewController.swift */,
+				7C91146D1DD24B4F008A05F7 /* PopMenuExample-Bridging-Header.h */,
 			);
 			path = PopMenuExample;
 			sourceTree = "<group>";
@@ -409,10 +411,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PopMenuExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ThatSoft.PopMenuExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PopMenuExample/PopMenuExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -420,10 +425,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PopMenuExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ThatSoft.PopMenuExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PopMenuExample/PopMenuExample-Bridging-Header.h";
 			};
 			name = Release;
 		};

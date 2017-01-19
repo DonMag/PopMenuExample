@@ -2,7 +2,7 @@
 //  PopMenuTableViewController.swift
 //  PopMenuExample
 //
-//  Created by Don Magnusson on 11/4/16.
+//  Created by DonMag on 11/4/16.
 //  Copyright © 2016 Mike Derr. All rights reserved.
 //
 
